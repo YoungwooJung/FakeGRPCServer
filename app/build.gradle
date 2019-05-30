@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/io.netty.versions.properties'
+    }
 }
 
 protobuf {
@@ -48,5 +53,6 @@ dependencies {
     implementation 'io.grpc:grpc-okhttp:1.20.0' // CURRENT_GRPC_VERSION
     implementation 'io.grpc:grpc-protobuf-lite:1.20.0' // CURRENT_GRPC_VERSION
     implementation 'io.grpc:grpc-stub:1.20.0' // CURRENT_GRPC_VERSION
+    implementation 'io.grpc:grpc-netty:1.20.0'
     implementation 'javax.annotation:javax.annotation-api:1.2'
 }

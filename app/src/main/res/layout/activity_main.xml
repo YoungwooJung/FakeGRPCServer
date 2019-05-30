@@ -6,13 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/port_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Port Number"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/start_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start gRPC Server" />
+
+    </LinearLayout>
+
 
 </android.support.constraint.ConstraintLayout>
